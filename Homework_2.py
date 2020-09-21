@@ -42,13 +42,13 @@ user_index = 0
 if serial_number > 4:
     print("Пользователь с указанным номером не найден")
 else:
-    user_index = serial_number
+    user_index = serial_number - 1
     user_inf = (f"Данные по юзеру № {serial_number}: \n" +
-                f"Имя: {user_list[user_index - 1]['name']}\n" +
-                f"Возраст: {user_list[user_index - 1]['age']}\n" +
-                f"Логин: {user_list[user_index - 1]['account']['login']}\n" +
-                f"Пароль: {user_list[user_index - 1]['account']['password']}\n" +
-                f"Пароль: {user_list[user_index - 1]['account']['password']}\n" +
+                f"Имя: {user_list[user_index]['name']}\n" +
+                f"Возраст: {user_list[user_index]['age']}\n" +
+                f"Логин: {user_list[user_index]['account']['login']}\n" +
+                f"Пароль: {user_list[user_index]['account']['password']}\n" +
+                f"Пароль: {user_list[user_index]['account']['password']}\n" +
                 f"Средний возраст пользователей: {avarage_age}")
     print(user_inf)
 
@@ -60,10 +60,10 @@ new_user_list = user_list
 if change_place > 4:
     print("Пользователь с указанным номером не найден")
 else:
-    user_numb = change_place-1
+    user_numb = change_place - 1
     print(f"Список до изменений: \n" + f"{user_list}")
     print(
-        f"Пользователь с именем : {new_user_list[change_place-1]['name']} перемещен в конец")
-    replace_el = new_user_list.pop(change_place-1)
+        f"Пользователь с именем : {new_user_list[user_numb]['name']} перемещен в конец")
+    replace_el = new_user_list.pop(change_place - 1)
     new_user_list.append(replace_el)
     print(f"Список после изменений: \n" + f"{new_user_list}")
