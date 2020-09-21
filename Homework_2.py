@@ -1,3 +1,4 @@
+import sys
 account1 = {'login': 'ivan', 'password': 'q1'}
 account2 = {'login': 'petr', 'password': 'q2'}
 account3 = {'login': 'olga', 'password': 'q3'}
@@ -12,22 +13,11 @@ user_list = [user1, user2, user3, user4]
 
 input_value = input("Введите ключ (name или account): ").lower()
 
-name_value = (f"значение ключа name для юзера 1 = {user1['name']}\n" +
-              f"значение ключа name для юзера 2 = {user2['name']}\n" +
-              f"значение ключа name для юзера 3 = {user3['name']}\n" +
-              f"значение ключа name для юзера 4 = {user4['name']}")
-
-account_value = (f"значение ключа login для юзера 1 = {account1['login']}\n" +
-                 f"значение ключа login для юзера 2 = {account2['login']}\n" +
-                 f"значение ключа login для юзера 3 = {account3['login']}\n" +
-                 f"значение ключа login для юзера 4 = {account2['login']}")
-
-if input_value == 'name':
-    print(name_value)
-elif input_value == 'account':
-    print(account_value)
-else:
-    print("Введенный ключ не найден")
+name_value = (f"значение ключа {input_value} для юзера 1 = {user1.get(input_value,'Введенный ключ не найден')}\n" +
+              f"значение ключа {input_value} для юзера 2 = {user2.get(input_value,'Введенный ключ не найден')}\n" +
+              f"значение ключа {input_value} для юзера 3 = {user3.get(input_value,'Введенный ключ не найден')}\n" +
+              f"значение ключа {input_value} для юзера 4 = {user4.get(input_value,'Введенный ключ не найден')}")
+print(name_value)
 
 serial_number = int(input("Введите порядковый номер: "))
 
