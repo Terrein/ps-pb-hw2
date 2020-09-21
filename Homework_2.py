@@ -48,7 +48,6 @@ else:
                 f"Возраст: {user_list[user_index]['age']}\n" +
                 f"Логин: {user_list[user_index]['account']['login']}\n" +
                 f"Пароль: {user_list[user_index]['account']['password']}\n" +
-                f"Пароль: {user_list[user_index]['account']['password']}\n" +
                 f"Средний возраст пользователей: {avarage_age}")
     print(user_inf)
 
