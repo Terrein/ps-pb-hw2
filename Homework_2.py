@@ -13,10 +13,10 @@ user_list = [user1, user2, user3, user4]
 
 input_value = input("Введите ключ (name или account): ").lower()
 
-name_value = (f"значение ключа {input_value} для юзера 1 = {user1.get(input_value,'Введенный ключ не найден')}\n" +
-              f"значение ключа {input_value} для юзера 2 = {user2.get(input_value,'Введенный ключ не найден')}\n" +
-              f"значение ключа {input_value} для юзера 3 = {user3.get(input_value,'Введенный ключ не найден')}\n" +
-              f"значение ключа {input_value} для юзера 4 = {user4.get(input_value,'Введенный ключ не найден')}")
+name_value = (f"значение ключа {input_value} для юзера 1 = {user1.get(input_value,account1.get(input_value,'Введенный ключ не найден'))}\n" +
+              f"значение ключа {input_value} для юзера 2 = {user2.get(input_value,account1.get(input_value,'Введенный ключ не найден'))}\n" +
+              f"значение ключа {input_value} для юзера 3 = {user3.get(input_value,account1.get(input_value,'Введенный ключ не найден'))}\n" +
+              f"значение ключа {input_value} для юзера 4 = {user4.get(input_value,account1.get(input_value,'Введенный ключ не найден'))}")
 print(name_value)
 
 serial_number = int(input("Введите порядковый номер: "))
