@@ -1,4 +1,3 @@
-import sys
 account1 = {'login': 'ivan', 'password': 'q1'}
 account2 = {'login': 'petr', 'password': 'q2'}
 account3 = {'login': 'olga', 'password': 'q3'}
